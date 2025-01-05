@@ -6,5 +6,13 @@ pipeline {
         checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rrajs4230/GitProject1.git']])
       }
     }
-}
+    stage("Maven Build") {
+      steps {
+        sh """
+          echo "-------- Building datastore project --------"
+          mvn clean package
+          echo "-------- Datastore project build successfully --------"
+        """
+      }
+  }
 }
