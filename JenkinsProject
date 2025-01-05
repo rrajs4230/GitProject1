@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh """
           echo "-------- Building datastore project --------"
-          mvn clean package
+          ./mvnw clean package
           echo "-------- Datastore project build successfully --------"
         """
       }
