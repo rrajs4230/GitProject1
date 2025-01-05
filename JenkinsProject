@@ -14,5 +14,6 @@ pipeline {
           echo "-------- Datastore project build successfully --------"
         """
       }
+     }
   }
 }
