@@ -1,0 +1,10 @@
+pipeline {
+  agent any
+   stages {
+    stage("scm-checkout") {
+      steps{
+        checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rrajs4230/GitProject1.git']])
+      }
+    }
+}
+}
